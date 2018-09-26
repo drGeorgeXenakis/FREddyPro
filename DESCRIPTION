@@ -1,0 +1,11 @@
+Package: FREddyPro
+Type: Package
+Title: Post-Processing EddyPro Full Output File
+Version: 1.2.2
+Date: 2018-06-26
+Author: Georgios Xenakis
+Maintainer: Georgios Xenakis <georgios.xenakis@forestry.gsi.gov.uk>
+Depends: R (>= 3.3.1)
+Description: Despike, ustar filtering, plotting, footprint modelling and general post-processing of a standard EddyPro full output file (LI-COR Inc 2011-2015 <https://www.licor.com/env/products/eddy_covariance/eddypro.html>).
+License: GPL-3
+Imports: lubridate, ggplot2, raster, dismo, sp, RColorBrewer
