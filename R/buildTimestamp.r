@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 buildTimestamp <-
 function (data, doy, decimal.hour, origin = "2016-01-01") 
 {
@@ -13,5 +15,3 @@ function (data, doy, decimal.hour, origin = "2016-01-01")
     names(spl) <- c("timestamp", names(as.data.frame(data)))
     return(spl)
 }
-.__global__ <-
-"."

@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 addSiteName <-
 function (data, name) 
 {
@@ -6,5 +8,3 @@ function (data, name)
     }
     return(data)
 }
-.__global__ <-
-"."

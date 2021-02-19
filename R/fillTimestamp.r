@@ -1,11 +1,13 @@
+.__global__ <-
+"."
 fillTimestamp <-
 function (data, timestamp = "timestamp", flux = FALSE, timedif = 30, 
     year = FALSE) 
 {
-    shift_time <- function(df, chg, amount) {
-        df = as.POSIXlt(df)
-        df[[chg]] <- df[[chg]] + amount
-        return(df)
+    shift_timestamp <- function(ts, chg, amount) {
+        ts = unclass(as.POSIXlt(ts))
+        ts[[chg]] <- ts[[chg]] + amount
+        return(.POSIXlt(ts))
     }
     data = createTimestamp(data, timestamp = timestamp)
     if (year) {
@@ -62,7 +64,8 @@ function (data, timestamp = "timestamp", flux = FALSE, timedif = 30,
             ncol = length(data))
         newrow <- data.frame(temprow)
         colnames(newrow) <- colnames(data)
-        k <- shift_time(data[[timestamp]][index], "min", -timedif)
+        k <- shift_timestamp(data[[timestamp]][index], "min", 
+            -timedif)
         newrow[[timestamp]] = k
         if (flux) {
             newrow[["date"]] = paste(year(as.character(k)), "-", 
@@ -80,5 +83,3 @@ function (data, timestamp = "timestamp", flux = FALSE, timedif = 30,
     }
     return(data)
 }
-.__global__ <-
-"."

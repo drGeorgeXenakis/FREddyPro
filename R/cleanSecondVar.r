@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 cleanSecondVar <-
 function (x, y, data) 
 {
@@ -5,5 +7,3 @@ function (x, y, data)
     data[[y]][clean] <- NA
     return(data)
 }
-.__global__ <-
-"."

@@ -6,26 +6,27 @@ function (dataFile, nSkip = 0, nSkipNames = 0, header = FALSE,
 {
     if (!reverse) {
         if (nSkip == 0) {
-            df <- read.table(dataFile, header = header, sep = sep, 
-                ...)
+            df <- readr::read_delim(file = dataFile, col_names = TRUE, 
+                delim = sep, na = na, ...)
         }
         else {
-            df <- read.table(dataFile, header = FALSE, skip = nSkip, 
-                sep = sep, ...)
+            df <- readr::read_delim(file = dataFile, col_names = FALSE, 
+                skip = nSkip, delim = sep, na = na, ...)
             if (nSkipNames != 0) {
-                n <- read.table(dataFile, header = TRUE, skip = nSkipNames, 
-                  nrows = 1, sep = sep, fill = TRUE)
+                n <- readr::read_delim(file = dataFile, col_names = TRUE, 
+                  skip = nSkipNames, n_max = 1, delim = sep, 
+                  na = na, ...)
                 names(df) <- names(n)
             }
         }
     }
     else {
-        n <- read.table(dataFile, header = TRUE, nrows = 1, sep = sep, 
-            fill = TRUE)
-        df <- read.table(dataFile, header = FALSE, skip = nSkip, 
-            sep = sep, ...)
+        df <- readr::read_delim(file = dataFile, col_names = F, 
+            skip = nSkip, delim = sep, na = na, ...)
+        n <- readr::read_delim(file = dataFile, col_names = T, 
+            skip = nSkipNames, n_max = 1, na = na, delim = sep, 
+            ...)
         names(df) <- names(n)
     }
-    df[df == na] <- NA
     return(df)
 }

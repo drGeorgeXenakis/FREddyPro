@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 cleanVarL <-
 function (data, x, y = NULL, lessThan = NULL) 
 {
@@ -10,5 +12,3 @@ function (data, x, y = NULL, lessThan = NULL)
     }
     return(data)
 }
-.__global__ <-
-"."

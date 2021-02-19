@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 calculatePercentFootprint <-
 function (ftp, percent = 99.99) 
 {
@@ -18,5 +20,3 @@ function (ftp, percent = 99.99)
     f[[1]] = rotate(rotate(rotate(unclass(m.sub))))
     return(f)
 }
-.__global__ <-
-"."

@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 continuity <-
 function (data, timestamp = NULL, timediff = 30) 
 {
@@ -27,5 +29,3 @@ function (data, timestamp = NULL, timediff = 30)
         print("No discontinuity", quote = F)
     }
 }
-.__global__ <-
-"."

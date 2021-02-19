@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 cleanVar <-
 function (x, data, lessThan = NULL, greaterThan = NULL) 
 {
@@ -5,5 +7,3 @@ function (x, data, lessThan = NULL, greaterThan = NULL)
     data[[x]][clean] <- NA
     return(data)
 }
-.__global__ <-
-"."

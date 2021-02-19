@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 exportFootprintPoints <-
 function (ftp, xcoord, ycoord) 
 {
@@ -13,5 +15,3 @@ function (ftp, xcoord, ycoord)
     df$y = df$y + ycoord
     return(df)
 }
-.__global__ <-
-"."

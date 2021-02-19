@@ -1,11 +1,13 @@
 exportPattern("^[[:alpha:]]+")
-importFrom("lubridate",
-           "hour","year","yday","leap_year",
-           "day","month","minute","second")
-importFrom("ggplot2",
-           "ggplot","geom_bar","coord_polar","scale_x_discrete",
-           "scale_fill_manual","theme","ggtitle","ylim","aes",
-           "waiver","element_blank","labs")
+## importFrom("lubridate",
+##            "hour","year","yday","leap_year",
+##            "day","month","minute","second")
+import("lubridate")
+## importFrom("ggplot2",
+##            "ggplot","geom_bar","coord_polar","scale_x_discrete",
+##            "scale_fill_manual","theme","ggtitle","ylim","aes",
+##            "waiver","element_blank","labs")
+import("ggplot2")
 importFrom("raster",
            "rasterFromXYZ","projectRaster","projection","crs")
 importFrom("dismo",

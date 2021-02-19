@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 distClean <-
 function (var, hour, df) 
 {
@@ -16,5 +18,3 @@ function (var, hour, df)
     }
     return(var)
 }
-.__global__ <-
-"."

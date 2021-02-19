@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 checkLeapYear <-
 function (ts) 
 {
@@ -8,5 +10,3 @@ function (ts)
         leapYear <- TRUE
     return(leapYear)
 }
-.__global__ <-
-"."

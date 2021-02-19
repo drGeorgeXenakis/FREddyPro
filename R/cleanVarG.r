@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 cleanVarG <-
 function (data, x, y = NULL, greaterThan = NULL) 
 {
@@ -10,5 +12,3 @@ function (data, x, y = NULL, greaterThan = NULL)
     }
     return(data)
 }
-.__global__ <-
-"."

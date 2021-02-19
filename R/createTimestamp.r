@@ -1,3 +1,5 @@
+.__global__ <-
+"."
 createTimestamp <-
 function (data, timestamp = NULL, timeZone = "GMT") 
 {
@@ -22,5 +24,3 @@ function (data, timestamp = NULL, timeZone = "GMT")
     }
     return(data)
 }
-.__global__ <-
-"."
