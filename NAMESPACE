@@ -2,7 +2,7 @@ exportPattern("^[[:alpha:]]+")
 ## importFrom("lubridate",
 ##            "hour","year","yday","leap_year",
 ##            "day","month","minute","second")
-import("lubridate")
+import("lubridate", except=c("hms"))
 ## importFrom("ggplot2",
 ##            "ggplot","geom_bar","coord_polar","scale_x_discrete",
 ##            "scale_fill_manual","theme","ggtitle","ylim","aes",
@@ -27,5 +27,6 @@ importFrom("sp",
            "CRS")
 importFrom("RColorBrewer",
            "brewer.pal")
-
-
+import("dplyr")
+import("lazyeval")
+import("hms")
