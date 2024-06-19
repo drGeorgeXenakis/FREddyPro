@@ -20,10 +20,10 @@ function (data, x, qc = NULL, qcFlag = NULL, times = 3, quantiles = c(0.05,
             dataSpk <- data
         }
         else {
-            dataSpk <- data %>% mutate(`:=`(!!v, if_else(!!qc_v != 
-                qcFlag, !!v, NA_real_)), `:=`(!!qc_v, if_else(!!qc_v != 
-                qcFlag, !!qc_v, NA_real_)), spikes = if_else(!!qc_v != 
-                qcFlag, 0, -1))
+            dataSpk <- data %>% mutate(`:=`(!!v, if_else(!(!!qc_v %in% 
+                qcFlag), !!v, NA_real_)), `:=`(!!qc_v, if_else(!(!!qc_v %in% 
+                qcFlag), !!qc_v, NA_real_)), spikes = if_else(!(!!qc_v %in% 
+                qcFlag), 0, -1))
         }
     }
     mean.positive <- dataSpk %>% filter(!!v >= 0) %>% select(!!v) %>% 
