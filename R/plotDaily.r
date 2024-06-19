@@ -1,9 +1,9 @@
 plotDaily <-
 function (x, day.x, y = NULL, day.y = NULL, median = FALSE, quantiles = FALSE, 
-    probs = c(0.05, 0.95), legend = FALSE, legendSide = NULL, 
-    legendText = NULL, type = "l", lty = c(1, 4), col = c(1, 
-        2), cex.legend = 1, horiz.legend = TRUE, ylab = "Mean and median", 
-    xlab = "Day", ...) 
+    probs = c(0.050000000000000003, 0.94999999999999996), legend = FALSE, 
+    legendSide = NULL, legendText = NULL, type = "l", lty = c(1, 
+        4), col = c(1, 2), cex.legend = 1, horiz.legend = TRUE, 
+    ylab = "Mean and median", xlab = "Day", ...) 
 {
     if (length(type) == 1) 
         type = c(type, type, type, type)

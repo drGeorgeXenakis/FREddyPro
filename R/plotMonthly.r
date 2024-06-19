@@ -17,8 +17,8 @@ function (data, var = "co2_flux", legend = FALSE, legendSide = NULL,
     parCol <- ifelse(((length(unique(data$month)) - 4)%%4) == 
         0, 4, ifelse(length(unique(data$month)) < 4, length(unique(data$month)), 
         4))
-    par(mfrow = c(parRaw, parCol), mar = c(0, 0.8, 0, 0), oma = c(5, 
-        5, 5, 5))
+    par(mfrow = c(parRaw, parCol), mar = c(0, 0.80000000000000004, 
+        0, 0), oma = c(5, 5, 5, 5))
     for (i in unique(data$month)[!is.na(unique(data$month))]) {
         if (i == 1 | i == 5 | i == 9) {
             plot(agg[which(agg$month == i), 3] ~ agg[which(agg$month == 

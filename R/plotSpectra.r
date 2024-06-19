@@ -27,8 +27,8 @@ function (data, gas, xlab = "Frequency [Hz]", ylab = "Spectrum",
     plot(data[[column[1]]] ~ data[[column[[1]] - 1]], log = "xy", 
         xlab = xlab, ylab = ylab, col = col[1], type = type[1], 
         pch = pch[1], xaxt = "n", ...)
-    axis(1, at = c(0.001, 0.01, 0.1, 1, 10), labels = c("0.001", 
-        "0.01", "0.1", "1", "10"))
+    axis(1, at = c(0.001, 0.01, 0.10000000000000001, 1, 10), 
+        labels = c("0.001", "0.01", "0.1", "1", "10"))
     if (avgT) {
         points(data[[column[1] - 1]] ~ data[[column[[1]] - 1]], 
             col = col[2], type = type[2], pch = pch[2], ...)

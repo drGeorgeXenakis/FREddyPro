@@ -1,10 +1,10 @@
 plotDiurnal <-
 function (data, xVar = "co2_flux", hourX = "hour", dataY = NULL, 
     yVar = NULL, hourY = NULL, median = FALSE, quantiles = FALSE, 
-    probs = c(0.05, 0.95), stdev = FALSE, sterr = FALSE, legend = FALSE, 
-    legendSide = NULL, legendText = NULL, type = "l", lty = c(1, 
-        4), col = c(1, 2), cex.legend = 1, horiz.legend = TRUE, 
-    ylab = "Mean", xlab = "Hour", ...) 
+    probs = c(0.050000000000000003, 0.94999999999999996), stdev = FALSE, 
+    sterr = FALSE, legend = FALSE, legendSide = NULL, legendText = NULL, 
+    type = "l", lty = c(1, 4), col = c(1, 2), cex.legend = 1, 
+    horiz.legend = TRUE, ylab = "Mean", xlab = "Hour", ...) 
 {
     if (length(type) == 1) 
         type = c(type, type, type, type)

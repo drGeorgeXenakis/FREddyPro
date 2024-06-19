@@ -12,11 +12,13 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
     }
     if (length(grep("Rn_1_1_1", names(data1))) == 0) {
         par(mfrow = c(6, 1), oma = c(4, 2, 2, 2), mar = c(0, 
-            5, 0, 4), cex = 0.8, xaxs = "i", yaxs = "i")
+            5, 0, 4), cex = 0.80000000000000004, xaxs = "i", 
+            yaxs = "i")
     }
     else {
         par(mfrow = c(7, 1), oma = c(4, 2, 2, 2), mar = c(0, 
-            5, 0, 4), cex = 0.8, xaxs = "i", yaxs = "i")
+            5, 0, 4), cex = 0.80000000000000004, xaxs = "i", 
+            yaxs = "i")
     }
     plot(co2_flux ~ DOY, data = data1, xlim = limList$DOY, ylim = limList$co2, 
         col = 1, xlab = "", ylab = "F"[c] ~ " (umol m"^-2 ~ " s"^-1 ~ 
@@ -30,7 +32,8 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
     abline(h = 0, lty = 3, lwd = 1.5)
     if (!is.null(legendText)) {
         legend("topleft", c(legendText[1], legendText[2]), col = c(1, 
-            2), lty = 1, cex = 0.8, horiz = TRUE, bty = "n")
+            2), lty = 1, cex = 0.80000000000000004, horiz = TRUE, 
+            bty = "n")
     }
     plot(H ~ DOY, data = data1, xlim = limList$DOY, ylim = limList$H, 
         col = 1, xlab = "", ylab = "", xaxt = "n", yaxt = "n", 
@@ -42,12 +45,13 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
     axis(1, at = seq(limList$DOY[1], limList$DOY[2], step), labels = FALSE)
     axis(2, labels = FALSE)
     axis(4, labels = TRUE)
-    mtext(4, text = expression(paste("H (W m"^"-2", ")")), cex = 0.8, 
+    mtext(4, text = expression(paste("H (W m"^"-2", ")")), cex = 0.80000000000000004, 
         outer = FALSE, line = 3.5)
     abline(h = 0, lty = 3, lwd = 1.5)
     if (!is.null(legendText)) {
         legend("topleft", c(legendText[1], legendText[2]), col = c(1, 
-            2), lty = 1, cex = 0.8, horiz = TRUE, bty = "n")
+            2), lty = 1, cex = 0.80000000000000004, horiz = TRUE, 
+            bty = "n")
     }
     plot(LE ~ DOY, data = data1, xlim = limList$DOY, ylim = limList$LE, 
         col = 1, xlab = "Day of Year", ylab = "LE (W m"^-2 ~ 
@@ -61,7 +65,8 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
     abline(h = 0, lty = 3, lwd = 1.5)
     if (!is.null(legendText)) {
         legend("topleft", c(legendText[1], legendText[2]), col = c(1, 
-            2), lty = 1, cex = 0.8, horiz = TRUE, bty = "n")
+            2), lty = 1, cex = 0.80000000000000004, horiz = TRUE, 
+            bty = "n")
     }
     plot(air_temperature ~ DOY, data = data1, xlim = limList$DOY, 
         ylim = limList$Tair, col = 1, xlab = "", ylab = "", xaxt = "n", 
@@ -74,11 +79,12 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
     axis(2, labels = FALSE)
     axis(4, labels = TRUE)
     mtext(4, text = expression(paste("T"[a] * " ("^o ~ "C)")), 
-        cex = 0.8, outer = FALSE, line = 3.5)
+        cex = 0.80000000000000004, outer = FALSE, line = 3.5)
     abline(h = 0, lty = 3, lwd = 1.5)
     if (!is.null(legendText)) {
         legend("topleft", c(legendText[1], legendText[2]), col = c(1, 
-            2), lty = 1, cex = 0.8, horiz = TRUE, bty = "n")
+            2), lty = 1, cex = 0.80000000000000004, horiz = TRUE, 
+            bty = "n")
     }
     plot(VPD ~ DOY, data = data1, xlim = limList$DOY, ylim = limList$VPD, 
         col = 1, xlab = "", ylab = "VPD (kPa)", xaxt = "n", ...)
@@ -91,7 +97,8 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
     abline(h = 0, lty = 3, lwd = 1.5)
     if (!is.null(legendText)) {
         legend("topleft", c(legendText[1], legendText[2]), col = c(1, 
-            2), lty = 1, cex = 0.8, horiz = TRUE, bty = "n")
+            2), lty = 1, cex = 0.80000000000000004, horiz = TRUE, 
+            bty = "n")
     }
     if (length(grep("Rn_1_1_1", names(data1))) == 0) {
         print("Net radiation (Rn_1_1_1) does not exist in the data frame and will not be plotted")
@@ -109,12 +116,12 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
         axis(2, labels = FALSE)
         axis(4, labels = TRUE)
         mtext(4, text = expression(paste("Rn (W m"^"-2", ")")), 
-            cex = 0.8, outer = FALSE, line = 3.5)
+            cex = 0.80000000000000004, outer = FALSE, line = 3.5)
         abline(h = 0, lty = 3, lwd = 1.5)
         if (!is.null(legendText)) {
             legend("topleft", c(legendText[1], legendText[2]), 
-                col = c(1, 2), lty = 1, cex = 0.8, horiz = TRUE, 
-                bty = "n")
+                col = c(1, 2), lty = 1, cex = 0.80000000000000004, 
+                horiz = TRUE, bty = "n")
         }
     }
     if (length(grep("Rn_1_1_1", names(data1))) == 0) {
@@ -130,14 +137,14 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
         axis(2, labels = FALSE)
         axis(4, labels = TRUE)
         mtext(4, text = expression(paste("u (m s"^-1 ~ ")")), 
-            cex = 0.8, outer = FALSE, line = 3.5)
-        mtext("Day of Year", side = 1, outer = TRUE, cex = 0.8, 
+            cex = 0.80000000000000004, outer = FALSE, line = 3.5)
+        mtext("Day of Year", side = 1, outer = TRUE, cex = 0.80000000000000004, 
             line = 2.5)
         abline(h = 0, lty = 3, lwd = 1.5)
         if (!is.null(legendText)) {
             legend("topleft", c(legendText[1], legendText[2]), 
-                col = c(1, 2), lty = 1, cex = 0.8, horiz = TRUE, 
-                bty = "n")
+                col = c(1, 2), lty = 1, cex = 0.80000000000000004, 
+                horiz = TRUE, bty = "n")
         }
     }
     else {
@@ -151,13 +158,13 @@ function (data1, limList = NULL, data2 = NULL, step = 1, legendText = NULL,
         axis(1, at = seq(limList$DOY[1], limList$DOY[2], step), 
             labels = TRUE)
         axis(4, labels = FALSE)
-        mtext("Day of Year", side = 1, outer = TRUE, cex = 0.8, 
+        mtext("Day of Year", side = 1, outer = TRUE, cex = 0.80000000000000004, 
             line = 2.5)
         abline(h = 0, lty = 3, lwd = 1.5)
         if (!is.null(legendText)) {
             legend("topleft", c(legendText[1], legendText[2]), 
-                col = c(1, 2), lty = 1, cex = 0.8, horiz = TRUE, 
-                bty = "n")
+                col = c(1, 2), lty = 1, cex = 0.80000000000000004, 
+                horiz = TRUE, bty = "n")
         }
     }
 }

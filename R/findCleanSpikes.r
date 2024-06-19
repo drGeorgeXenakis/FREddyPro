@@ -1,6 +1,6 @@
 findCleanSpikes <-
-function (data, x, qc = NULL, qcFlag = NULL, times = 3, quantiles = c(0.05, 
-    0.95), group = hour, plotSpikes = FALSE, removeSpikes = FALSE, 
+function (data, x, qc = NULL, qcFlag = NULL, times = 3, quantiles = c(0.050000000000000003, 
+    0.94999999999999996), group = hour, plotSpikes = FALSE, removeSpikes = FALSE, 
     returnDataFrameOnly = FALSE, limits = c(-50, 30), breaks = seq(-50, 
         30, 20)) 
 {

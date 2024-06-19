@@ -1,5 +1,5 @@
 calculatePercentFootprint <-
-function (ftp, percent = 99.99) 
+function (ftp, percent = 99.989999999999995) 
 {
     rotate <- function(x) t(apply(x, 2, rev))
     x = ftp[[2]]

@@ -89,8 +89,8 @@ function (fetch = 500, height = 3, grid = 200, speed, direction,
     psim = ifelse(zol > 0, 5 * zol, -2 * log((1 + zt)/2) - log((1 + 
         zt * zt)/2) + 2 * atan(zt) - pi/2)
     nn = ifelse(zol > 0, 1/phic, (1 - 24 * zol)/(1 - 16 * zol))
-    eddydif = 0.41 * uStar * height/phic
-    mm = uStar * phim/(0.41 * speed)
+    eddydif = 0.40999999999999998 * uStar * height/phic
+    mm = uStar * phim/(0.40999999999999998 * speed)
     rr = 2 + mm - nn
     mu = (1 + mm)/rr
     alpu = speed/(height^mm)
@@ -101,7 +101,7 @@ function (fetch = 500, height = 3, grid = 200, speed, direction,
     Pf[idup] = (1/fgamma) * (xi^mu)/(FPx[idup]^(1 + mu)) * exp(-1 * 
         xi/FPx[idup])
     uPlume = (gamma(mu)/gamma(1/rr))
-    uPlume = uPlume * ((rr * rr * 0.4/speed)^(mm/rr))
+    uPlume = uPlume * ((rr * rr * 0.40000000000000002/speed)^(mm/rr))
     auPlume[idup] = uPlume * (speed * (FPx[idup]^(mm/rr)))
     sigmaY[idup] = sigmaV * FPx[idup]/auPlume[idup]
     twopisigma[idup] = 1/((sqrt(2 * pi) * sigmaY[idup]))

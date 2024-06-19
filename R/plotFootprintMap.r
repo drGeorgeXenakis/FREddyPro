@@ -1,7 +1,7 @@
 .__global__ <-
 "."
 plotFootprintMap <-
-function (footprint, X, Y, zoom, maptype = "hybrid", alpha = 0.35) 
+function (footprint, X, Y, zoom, maptype = "hybrid", alpha = 0.34999999999999998) 
 {
     x = t(apply(footprint[[2]], 2, rev))
     y = t(apply(footprint[[3]], 2, rev))

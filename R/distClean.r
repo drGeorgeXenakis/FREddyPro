@@ -3,7 +3,7 @@ function (var, hour, df)
 {
     m <- aggregate(var ~ hour, data = df, mean)
     q <- as.data.frame(t(as.data.frame(t(aggregate(var ~ hour, 
-        data = df, quantile, prob = c(0.05, 0.95))))))
+        data = df, quantile, prob = c(0.050000000000000003, 0.94999999999999996))))))
     p <- merge(m, q, "hour")
     names(p)[c(3, 4)] <- c("quant5", "quant95")
     for (i in 1:nrow(p)) {

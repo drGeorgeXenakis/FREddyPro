@@ -16,5 +16,5 @@ function (footprint, main.title = NULL, key.title = NULL, color.palette = NULL,
     cord = unique(as.vector(footprint[[2]]))
     filled.contour(cord, cord, ftpr, color.palette = color.palette, 
         plot.title = title(main = main.title), key.title = title(main = key.title, 
-            adj = 0.2), ...)
+            adj = 0.20000000000000001), ...)
 }
